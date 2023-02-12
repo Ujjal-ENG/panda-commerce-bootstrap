@@ -19,8 +19,11 @@ for (let card of cards) {
 }
 
 for (let pandaBtn of pandaBtns) {
-  pandaBtn.addEventListener("click", (e) => {});
+  pandaBtn.addEventListener("click", (e) => {
+    e.target.remove();
+  });
 }
+
 subBtn.disabled = true;
 emailBtn.addEventListener("keyup", (e) => {
   if (e.target.value.toLowerCase() == "email") {
@@ -34,6 +37,9 @@ colrChange.addEventListener("click", (e) => {
   count++;
   if (count === 2) {
     colrChange.style.backgroundColor = "red";
+  }
+  if (count === 3) {
+    colrChange.style.backgroundColor = "white";
   }
 });
 
